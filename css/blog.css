@@ -1,0 +1,120 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background: linear-gradient(217deg, rgba(206, 0, 62, 0.979), rgba(255,0,0,0) 80%),
+            linear-gradient(130deg, rgb(0, 163, 155), rgba(0,255,0,0) 75%),
+            linear-gradient(300deg, rgba(27, 228, 0, 0.932), rgba(0,0,255,0) 85%);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    
+    /* height: 100vh;  */
+    text-align: center;
+
+}
+
+header{
+    width: 98%;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    background: rgba(13, 65, 75, 0.61);
+    margin: auto;
+}
+
+nav{
+    width: 94%;
+    margin: auto;
+}
+
+nav ul{ 
+    list-style: none; 
+    background: #09141ac4;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    transition: ease-in-out 20ms;
+}
+a{
+    color:ghostwhite;
+    text-decoration:none;
+}
+nav ul li:hover{
+    background: rgb(0, 187, 47);
+    color: black;
+}
+
+div {    
+    color: rgb(224, 224, 224);
+    margin: auto;    
+    padding: 10px;
+    background:rgba(68, 68, 68, 0.329);
+}
+
+div aside img{  
+    max-width: 100%;
+    /* display: block;
+    margin: auto;    */
+    /* text-align: center; */
+    /* display: table-cell;
+    vertical-align: middle */
+    /* display: block;
+    margin-top: auto;
+    margin-bottom: auto;    */
+    margin: auto;
+    height: 100%;
+    /* vertical-align: middle; */
+    /* line-height: 100px; */
+}
+
+article{
+    text-align: left;
+    background:rgba(36, 36, 36, 0.904);
+    padding: 10px;
+}
+
+  .grilla {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:      
+      "content"
+      "sidebar"      
+  }
+ 
+  @media (min-width: 700px) {
+    .grilla {
+      grid-template-columns: 4fr 2fr;
+      grid-template-areas:       
+        "sidebar content"
+    }
+    div {
+        width: 80%;
+    }    
+  }
+
+footer{
+    
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height: 20px;
+    width:100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.308);
+    color: rgb(224, 224, 224);
+   
+}
+
+footer a{
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
