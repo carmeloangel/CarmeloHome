@@ -10,8 +10,9 @@ body {
     background: linear-gradient(217deg, rgba(206, 0, 62, 0.979), rgba(255,0,0,0) 80%),
             linear-gradient(130deg, rgb(0, 163, 155), rgba(0,255,0,0) 75%),
             linear-gradient(300deg, rgba(27, 228, 0, 0.932), rgba(0,0,255,0) 85%);
-    background-repeat: no-repeat;
-    background-size: cover ;
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-attachment: fixed; 
     
     /* height: 100vh;  */
     text-align: center;

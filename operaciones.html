@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operaciones con datos usando JS</title>
+    <link rel="shortcut icon" href="img/ico3.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/usoJS.css">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/operaciones.js"></script>
+
+</head>
+
+<body class="container">
+
+    <header>
+        <h3>Uso de JavaScript y Bootstrap</h3>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">The Enter</a></li>
+            <li><a href="resume.html">Tiny CV</a></li>
+            <li><a href="blog.html">A Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    <h5>Ejercicio #1</h5>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+
+
+                    <form action="#" method="GET" name="form1" onsubmit="ejercicio1()">
+                        <h5>Ingrese la cantidad de nombres a procesar. Un valor entre 3 y 10:</h5>
+                        <br>
+
+                        <div class="input-group mb-3">
+                            <input type="number" id="valor" name="valor" required min="3" max="10" class="form-control"
+                                placeholder="Ingrese un número." aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"
+                                value="Enviar">Enviar</button>
+                        </div>
+
+                        <div class="alert alert-success" role="alert">
+                            <p id="cajaResultado1">Aqui deberia aparecer el resultado siempre. Pero a veces se
+                                recarga sola la página y se borra. Se lo puede ver antes de que desaparezca el último
+                                alert.</p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    <h5>Ejercicio #2</h5>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+
+                    <form action="#" method="GET" name="form2" onsubmit="ejercicio2()">
+                        <h5>Se calcularán los números entre 1 y 100, que son múltiplos de 5. Elija mostrar los pares
+                            o impares:</h5>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="opcion" id="flexRadioDefault1"
+                                value="true">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                PAR
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="opcion" id="flexRadioDefault2"
+                                value="false" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                IMPAR
+                            </label>
+                        </div>
+
+                        <br>
+                        <input class="btn btn-outline-secondary" type="submit" value="Mostrar">
+
+                        <br> <br>
+                        <div class="alert alert-success" role="alert">
+                            <p id="cajaResultado2">Aqui deberia aparecer el resultado siempre. Pero a veces se
+                                recarga sola la página y se borra. Se lo puede ver antes de que desaparezca el último
+                                alert.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    <h5>Ejercicio #3</h5>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                    <form action="#" method="GET" name="form3" onsubmit="ejercicio3()">
+                        <h5>Ingrese la operación matemática a realizar, y luego los dos valores requeridos:</h5>
+
+                        <select id="opciones" name="opciones" class="form-select" aria-label="Default select example">
+                            <option value="1">Suma</option>
+                            <option value="2">Resta</option>
+                            <option value="3">Multiplicación</option>
+                        </select>
+
+                        <br>
+                        <div class="input-group mb-3">
+                            <input type="number" required min="1" id="num1" name="num1" class="form-control"
+                                placeholder="Ingrese el primer número" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <input type="number" required min="1" id="num2" name="num2" class="form-control"
+                                placeholder="Ingrese el segundo número" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon3"
+                                value="Enviar">Calcular</button>
+                        </div>
+                        <br>
+
+                        <div class="alert alert-success" role="alert">
+                            <p id="cajaResultado3">Aqui deberia aparecer el resultado siempre. Pero a veces se
+                                recarga sola la página y se borra. Se lo puede ver antes de que desaparezca el último
+                                alert.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h6><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="blank">CC</a> •
+            Campos, Angel • <a href="mailto:angel.o.cmp@gmail.com">angel.o.cmp@gmail.com</a> • 2021</h6>
+    </footer>
+
+</body>
+
+</html>
